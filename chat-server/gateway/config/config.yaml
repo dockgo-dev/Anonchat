@@ -1,0 +1,18 @@
+server:
+  addr: 0.0.0.0:80
+  timeouts:
+    write: 10s
+    read: 10s
+  rate-limits:
+    max-requests: 100
+    update-in: 1m
+    mode: on
+  logger:
+    level: info
+    mode: on
+  auth:
+    mode: on
+
+authorization-sercice:
+  addr: authorization:80
+  mode: on

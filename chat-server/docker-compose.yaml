@@ -1,0 +1,32 @@
+services:
+  gateway:
+    build: gateway
+    container_name: chat-gateway
+    environment:
+      - GIN_MODE=release
+    ports:
+      - 8080:80
+    depends_on:
+      - authorization
+
+  authorization:
+    build: /services/authorization
+    container_name: chat-authorization
+    environment:
+      - GIN_MODE=release
+    depends_on:
+      - postgres
+      
+  postgres:
+    image: postgres:17
+    container_name: chat-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: "system"
+      POSTGRES_PASSWORD: "system-db-chat-25.v1"
+      POSTGRES_DB: "chat"
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:

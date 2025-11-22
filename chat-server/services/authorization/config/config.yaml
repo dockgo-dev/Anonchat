@@ -1,0 +1,10 @@
+server:
+  addr: 0.0.0.0:80
+  password: POjdjpPOSAo123-AS[kr0-1d]ASpojd1_0dk10SofpojqoPKOSK1od-0[-+1]
+  timeouts:
+    write: 10s
+    read: 10s
+postgres:
+  addr: postgres:5432
+  user: system:system-db-chat-25.v1
+  db: chat
