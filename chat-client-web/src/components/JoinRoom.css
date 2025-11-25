@@ -31,6 +31,7 @@
 .join-room-input-group {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .join-room-input {
@@ -71,5 +72,15 @@
 
 .join-room-button:active {
   transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .join-room-input-group {
+    flex-direction: column;
+  }
+
+  .join-room-button {
+    width: 100%;
+  }
 }
 
