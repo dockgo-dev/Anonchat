@@ -39,7 +39,7 @@ Built with **microservices architecture** using API Gateway, **PostgreSQL** for 
 
 | Layer              | Stack                                      |
 | ------------------ | ------------------------------------------ |
-| **Language**       | Go 1.25+                                   |
+| **Language**       | Go 1.25                                    |
 | **Framework**      | Gin                                        |
 | **WebSocket**      | Gorilla WebSocket                          |
 | **Database**       | PostgreSQL 17                              |
@@ -289,5 +289,6 @@ docker-compose down
 ## 📧 Support / Поддержка
 
 Для вопросов и предложений создавайте issues в репозитории проекта.
+
 
 
